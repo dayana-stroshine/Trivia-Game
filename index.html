@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trivia Game</title>
+
+<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!--Link to CSS-->	
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+</head>
+
+
+<body>
+<!--********************************** intro page **********************************:-->
+<div class="container">
+		  <div class="jumbotron">
+	  		<h1>Chicago Trivia</h1>
+	  		<hr><p><button id="start">Start</button></a></p><hr>
+		  </div>
+</div>
+
+<!--********************************** Q & A Layout **********************************:-->
+<div class = "layout">
+
+	<p id="question"></p>
+
+	<div class="buttons">
+		<button id="btn0"><span id="choice0"></span></button>
+		<button id="btn1"><span id="choice1"></span></button>
+		<button id="btn2"><span id="choice2"></span></button>
+		<button id="btn3"><span id="choice3"></span></button>
+	</div>
+
+	<footer>
+		<p id="progress"> Question x of y </p>
+	</footer>
+</div>
+
+
+<!--********************************** Javascript/jQuery Links **********************************:-->
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="assets/javascript/quizController.js"></script>
+	<script type="text/javascript" src="assets/javascript/questions.js"></script>
+	
+</body>
+</html>
