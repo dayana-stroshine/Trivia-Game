@@ -26,28 +26,38 @@
 // };
 
 
-function guess(id, guess){
-	var button = document.getElementById(id);
-	button.onclick=function(){
-		quiz.guess(guess);
-		populate();
-	}
-};
+// function guess(id, guess){
+// 	var button = document.getElementById(id);
+// 	button.onclick=function(){
+// 		quiz.guess(guess);
+// 		populate();
+// 	}
+// };
 
-function showProgress(){
-	var currentQuestion = quiz.getQuestionIndex + 1;
-	var element = document.getElementById("progres");
-	element.innerHTML = "Question " + currentQuestion + "of" + qiuz.questions.length;
-}
+// function showProgress(){
+// 	var currentQuestion = quiz.getQuestionIndex + 1;
+// 	var element = document.getElementById("progres");
+// 	element.innerHTML = "Question " + currentQuestion + "of" + qiuz.questions.length;
+// }
 
 
 
-function showScore(){
-	var gameOver = "<h1> Results</h1>";
-		gameOver += "<h2 id='score'>Your score: "+ quiz.score +" </h2>";
-	var element = document.getElementById("quiz");
-	element.innerHTML = gameOver;
-}
+// function showScore(){
+// 	var gameOver = "<h1> Results</h1>";
+// 		gameOver += "<h2 id='score'>Your score: "+ quiz.score +" </h2>";
+// 	var element = document.getElementById("quiz");
+// 	element.innerHTML = gameOver;
+// }
+
+
+// var quiz = new Quiz(questions);
+
+// populate();
+
+$('#start').on('click', function(){
+	$(".jumbotron").css("display", "none");
+	$(".layout").css("display", "block");
+})
 
 
 var questions = [
@@ -56,11 +66,26 @@ var questions = [
 	["I miss everything about Chicago, except...? - Gary Cole", ["the traffic", "hotdogs and beer", "the noise", "January and February"], "January and February"],
 ];
 
-$('#start').on('click', function(){
-	$(".jumbotron").css("display", "none");
-	$(".layout").css("display", "block");
-})
 
-// var quiz = new Quiz(questions);
+		function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
 
-// populate();
+shuffleArray(questions);
+//     }
+//     return questions;
+//     $("#question").html("<h2>" + questions + "</h2>");
+// }
+// 	// 	//var element = document.getElementById("question");
+// 	// 	//element.innerHTML = questions().text;
+// 	// 	$("#question").html("<h2>" + questions + "</h2>");
+// 	//     console.log("working");
+// 	// }
+// 			populate();
+
