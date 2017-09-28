@@ -60,24 +60,21 @@ $('#start').on('click', function(){
 })
 
 
-var questions = [
-	["Chicago is referred to as...?", ["The City that Never Sleeps", "The Windy City", "The City of Angels", "The Mini Apple"], "The Windy City"],
-	["The current estimated population of Chciago is...?", ["A", "B", "C", "D"], "D"],
-	["I miss everything about Chicago, except...? - Gary Cole", ["the traffic", "hotdogs and beer", "the noise", "January and February"], "January and February"],
-];
+var questions = ["Chicago is referred to as...?", "This is seen all over Chicago, what does that famous 'W' flag mean?", "C","D"];
 
-
-		function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
+	function shuffleArray(questions) {
+    for (var i = questions.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
+        var temp = questions[i];
+        questions[i] = questions[j];
+        questions[j] = temp;
+ }
+    return questions;
+    
 }
 
 shuffleArray(questions);
+document.getElementById("question").innerHTML = questions[0];
 //     }
 //     return questions;
 //     $("#question").html("<h2>" + questions + "</h2>");
