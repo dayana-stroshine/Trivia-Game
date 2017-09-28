@@ -53,17 +53,17 @@
 // var quiz = new Quiz(questions);
 
 // populate();
-
-$('#start').on('click', function(){
+//********************************* Start Button ******************************************* //
+$('#startBtn').on('click', function(){
 	$(".jumbotron").css("display", "none");
 	$(".layout").css("display", "block");
 })
 
+//********************************* Questions Array ******************************************* //
+var questions = ["Question A", "Question B", "Question C","Question D","Question E"];
 
-var questions = ["Chicago is referred to as...?", "This is seen all over Chicago, what does that famous 'W' flag mean?", "C","D"];
-
-	function shuffleArray(questions) {
-    for (var i = questions.length - 1; i > 0; i--) {
+function shuffleArray(questions) {
+    for (var i = questions.length -1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = questions[i];
         questions[i] = questions[j];
@@ -75,14 +75,19 @@ var questions = ["Chicago is referred to as...?", "This is seen all over Chicago
 
 shuffleArray(questions);
 document.getElementById("question").innerHTML = questions[0];
-//     }
-//     return questions;
-//     $("#question").html("<h2>" + questions + "</h2>");
-// }
-// 	// 	//var element = document.getElementById("question");
-// 	// 	//element.innerHTML = questions().text;
-// 	// 	$("#question").html("<h2>" + questions + "</h2>");
-// 	//     console.log("working");
-// 	// }
-// 			populate();
+
+//********************************* Answers Array ******************************************* //
+var answersA = ["Answer A", "Answer B", "Answer C","Answer D"];
+
+function showAnswer(answers) {
+    if(questions[0] === questions[1])
+    return answersA;
+    
+}
+
+showAnswer(answersA);
+document.getElementById("btn0").innerHTML = answersA[0];
+document.getElementById("btn1").innerHTML = answersA[1];
+document.getElementById("btn2").innerHTML = answersA[2];
+document.getElementById("btn3").innerHTML = answersA[3];
 
