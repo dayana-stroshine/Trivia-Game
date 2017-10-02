@@ -86,4 +86,7 @@ body{
 	outline:0;
 }
 
-
+#questions{
+	margin-top: 100px;
+	font-size: 20px;
+}

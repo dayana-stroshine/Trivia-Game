@@ -1,0 +1,11 @@
+
+ ✔ -place a start button to get begin game
+ ✔ -randomly generate questions 
+-make sure same questions don't repeat in same game
+-match choices to each question
+-place a countdown timer for each question
+-if user clicks correct choices: show "correct" message 
+-if user clicks incorrect choices: show "correct" options with message indicating correct choice
+-keep track of "question x of y" per page
+-show final score at the end of the game 
+-play again button on last page
