@@ -66,7 +66,7 @@ $('#startBtn').on('click', function(){
 })
 
 //********************************* Questions Placement *********************************** //
-var questions= ["Chicago is an Indian word from which the name of the city is derived. What does the word mean?","A section of which Chicago Street is known as 'the magnificent mile?'", "Question C","Question D","Question E"];
+var questions= ["Chicago is an Indian word from which the name of the city is derived. What does the word mean?","A section of which Chicago Street is known as 'the magnificent mile?'", "What does that famous 'W' flag mean?","Chicago is referred to as...?","When was the Great Chicago Fire?"];
 
 function shuffleArray(questions) {
     for (var i = questions.length -1; i > 0; i--) {
